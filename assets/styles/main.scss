@@ -1,0 +1,300 @@
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/sass-mediaqueries/_media-queries.scss";
+// endbower
+
+/**
+ * Project Variables
+ */
+
+// Overall Variables
+$main-dimension: 260px;
+$main-dimension-small: 410px;
+$main-dimension-medium: 600px;
+
+// Colors
+$white: #fff;
+$black: #000;
+$gray-light: #f7f7f7;
+$gray-dark: #3b3a3a;
+
+// Space
+$space: 30px;
+$space-tiny: ($space / 3);
+$space-small: ($space / 2);
+$space-medium: ($space * 1.5);
+$space-large: ($space * 2);
+$space-huge: ($space * 3);
+
+// Screen Sizes
+$screen-small: 500px;
+$screen-medium: 720px;
+
+// Wrapper Padding
+$wrapper-padding: 20px;
+$wrapper-padding-small: 30px;
+$wrapper-padding-medium: 60px;
+
+/**
+ * Global Styles
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
+  color: $gray-dark;
+  font-size: 14px;
+
+  @include min-screen($screen-medium) {
+    font-size: 16px;
+  }
+}
+
+a {
+  color: $gray-dark;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin-bottom: $space-tiny;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Mixins/Utilities
+ */
+
+// Aspect Ratio Mixin
+@mixin aspect-ratio($ratio-or-width, $height: null) {
+  $padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width));
+  &:before { content:''; float: left; padding-bottom: $padding; }
+  &:after  { content:''; display: table; clear: both; }
+}
+
+/**
+ * Components
+ */
+
+// A "column" has a margin on the right to organize content
+.column {
+  margin-right: $space;
+  display: inline-block;
+}
+
+// A "block" holds content, but is forced to a 1:1 aspect ratio
+.block {
+  @include aspect-ratio(1);
+  @extend .column;
+  max-height: $main-dimension;
+  max-width: $main-dimension;
+  min-width: $main-dimension;
+  overflow: hidden;
+
+  @include min-screen ($screen-small) {
+    max-height: $main-dimension-small;
+    max-width: $main-dimension-small;
+    min-width: $main-dimension-small;
+  }
+
+  @include min-screen ($screen-medium) {
+    max-height: $main-dimension-medium;
+    max-width: $main-dimension-medium;
+    min-width: $main-dimension-medium;
+  }
+}
+
+
+
+/**
+ * Layouts
+ */
+
+// Wrapper
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 72px 0 $space $wrapper-padding;
+}
+
+// Header
+.header {
+  height: 72px;
+  left: 0;
+  padding-left: $wrapper-padding;
+  padding-top: $space-small;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  @include min-screen($screen-medium) {
+    position: fixed;
+  }
+}
+
+@include min-screen($screen-small) {
+  .wrapper,
+  .header {
+    padding-left: $wrapper-padding-small;
+  }
+}
+
+@include min-screen($screen-medium) {
+  .wrapper,
+  .header {
+    padding-left: $wrapper-padding-medium;
+  }
+}
+
+// Navigation
+.site-nav-wrap {
+  display: inline-block;
+  margin-right: $space-small;
+  position: relative;
+}
+.nav-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 42px;
+  outline: none;
+  padding: 0;
+  position: relative;
+  width: 42px;
+  z-index: 100;
+
+  .icon-bar {
+    background: $gray-dark;
+    border-radius: 3px;
+    display: block;
+    height: 2px;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    width: 16px;
+
+    &.top {
+      top: 15px;
+    }
+    &.middle {
+      top: 20px;
+    }
+    &.bottom {
+      top: 25px;
+    }
+  }
+}
+.site-nav {
+  background: $gray-light;
+  display: none;
+  left: 0;
+  padding-left: $space-large;
+  position: absolute;
+  top: 0;
+  width: 220px;
+  z-index: 50;
+
+  .nav-item {
+    display: block;
+    border-bottom: 1px solid $gray-dark;
+    padding: 12px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.site-nav-wrap.open {
+  .nav-icon {
+    // Do "x" stuff here
+  }
+  .site-nav {
+    display: block;
+  }
+}
+
+.site-logo {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+}
+
+// Horizontal Scrolling!
+.columns,
+.projects,
+.project {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+
+// Project Page (Homepage) Styles
+.project {
+  margin-right: $space;
+
+  &:last-of-type {
+    margin-right: $space-huge;
+  }
+}
+
+.project-lead {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: $space-small;
+
+  @include min-screen($screen-small) {
+    padding: $space;
+  }
+
+  .project-title {
+    font-size: 100%;
+    margin: $space-small 0 0;
+
+    @include min-screen($screen-medium) {
+      margin-top: $space;
+    }
+  }
+
+  .project-content {
+    display: none;
+    margin: $space-small 0;
+
+    @include min-screen($screen-small) {
+      display: block;
+    }
+
+    .content-extended {
+      font-size: 0;
+
+      @include min-screen($screen-medium) {
+        font-size: 100%;
+      }
+    }
+  }
+
+  .project-download {
+    display: none;
+
+    @include min-screen($screen-medium) {
+      display: block;
+    }
+  }
+}

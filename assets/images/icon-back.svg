@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>A77A5B51-1B2D-46F0-8CC9-0AB2A066538D</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic-back" transform="translate(-13.000000, -13.000000)">
+            <g>
+                <rect id="Tap-Area" x="0" y="0" width="42" height="42"></rect>
+                <path d="M15.4180895,21.0038758 L21.715108,27.3008943 C22.1033123,27.6890986 22.1041543,28.3176602 21.7109073,28.7109072 C21.320383,29.1014315 20.6842338,29.0984472 20.3008944,28.7151079 L13.3707752,21.7849887 C13.3438999,21.7632171 13.3179006,21.7398367 13.2929078,21.7148439 C12.8996609,21.321597 12.9006501,20.6928881 13.289036,20.3045022 L20.3005656,13.2929726 C20.6840842,12.909454 21.320383,12.9063202 21.7109073,13.2968444 C22.1041543,13.6900914 22.1031651,14.3188002 21.7147791,14.7071862 L15.4180895,21.0038758 Z" id="Combined-Shape" fill="#3B3939"></path>
+                <rect id="Rectangle" fill="#3B3939" x="13" y="20" width="16" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
