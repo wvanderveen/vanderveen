@@ -1,8 +1,8 @@
 {
-  "name": "birdsflysouth-landing",
+  "name": "vanderveen",
   "version": "2.0.0",
-  "author": "Craftpeak <hello@craftpeak.com>",
-  "homepage": "http://bfsbeer.com/",
+  "author": "Julien Melissas <julien@craftpeak.com>",
+  "homepage": "http://williamvanderveen.com/",
   "private": true,
   "scripts": {
     "build": "bower install && gulp",

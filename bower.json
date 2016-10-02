@@ -1,8 +1,8 @@
 {
-  "name": "birdsflysouth-landing",
-  "homepage": "http://bfsbeer.com",
+  "name": "vanderveen",
+  "homepage": "http://williamvanderveen.com",
   "authors": [
-    "Craftpeak <hello@craftpeak.com>"
+    "Julien Melissas <julien@craftpeak.com>"
   ],
   "private": true,
   "dependencies": {
