@@ -221,7 +221,11 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 gulp.task('watch', function() {
   browserSync.init({
     server: true,
-    files: ['index.html']
+    files: [
+      'index.html',
+      'contact-info.html',
+      'credentials.html'
+    ]
   });
   gulp.watch([path.source + 'styles/**/*'], ['styles']);
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
