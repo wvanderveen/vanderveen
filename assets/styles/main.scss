@@ -190,36 +190,13 @@ img {
   position: relative;
 }
 .nav-icon {
-  background: none;
-  border: none;
+  background: url('../images/menu-icons.png') no-repeat left center;
+  background-size: 84px 42px;
   cursor: pointer;
   height: 42px;
-  outline: none;
-  padding: 0;
   position: relative;
   width: 42px;
   z-index: 100;
-
-  .icon-bar {
-    background: $gray-dark;
-    border-radius: 3px;
-    display: block;
-    height: 2px;
-    left: 50%;
-    margin-left: -8px;
-    position: absolute;
-    width: 16px;
-
-    &.top {
-      top: 15px;
-    }
-    &.middle {
-      top: 20px;
-    }
-    &.bottom {
-      top: 25px;
-    }
-  }
 }
 .site-nav {
   background: $gray-light;
@@ -244,7 +221,7 @@ img {
 
 .site-nav-wrap.open {
   .nav-icon {
-    // Do "x" stuff here
+    background-position: right center;
   }
   .site-nav {
     display: block;
