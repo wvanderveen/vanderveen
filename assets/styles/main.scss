@@ -20,11 +20,10 @@ $gray-dark: #3b3a3a;
 
 // Space
 $space: 30px;
-$space-tiny: ($space / 3);
-$space-small: ($space / 2);
-$space-medium: ($space * 1.5);
-$space-large: ($space * 2);
-$space-huge: ($space * 3);
+$space-tiny: 10px;
+$space-small: 15px;
+$space-medium: 40px;
+$space-large: 60px;
 
 // Screen Sizes
 $screen-small: 500px;
@@ -248,7 +247,11 @@ img {
   margin-right: $space;
 
   &:last-of-type {
-    margin-right: $space-huge;
+    margin-right: 0;
+
+    @include min-screen($screen-small) {
+      margin-right: $space;
+    }
   }
 }
 
@@ -293,6 +296,25 @@ img {
 
     @include min-screen($screen-medium) {
       display: block;
+    }
+  }
+}
+
+.back-wrap {
+  align-items: center;
+  display: flex;
+
+  .back {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    margin-right: $space;
+    width: 42px;
+
+    @include min-screen($screen-small) {
+      margin-right: $space-large;
     }
   }
 }

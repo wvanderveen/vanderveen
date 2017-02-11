@@ -3,10 +3,16 @@
  */
 $(document).ready(function() {
   // Nav Button Toggle
-  $('.nav-icon').click(function(event) {
+  $('.nav-icon').click(function() {
     $(this).parent().toggleClass('open');
   });
 
   // FitVids.js
   $('.project-video').fitVids();
+
+  // Back Button Click
+  $('.back').click(function(event) {
+    event.preventDefault();
+    $('body, html').animate({scrollLeft: 0}, 600);
+  });
 });
