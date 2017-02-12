@@ -15,12 +15,4 @@ $(document).ready(function() {
     event.preventDefault();
     $('body, html').animate({scrollLeft: 0}, 600);
   });
-
-  // Mouse Up and Down scrolls left and right
-  $('body').mousewheel(function(event) {
-    if (event.deltaY) {
-      this.scrollLeft -= (event.deltaY);
-      event.preventDefault();
-    }
-   });
 });

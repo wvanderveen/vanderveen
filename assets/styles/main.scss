@@ -260,10 +260,9 @@ img {
 }
 
 .project-lead {
-  align-items: center;
   display: flex;
   justify-content: center;
-  padding: $space-small;
+  padding-top: $space;
 
   @include min-screen($screen-small) {
     padding: $space;
@@ -324,5 +323,15 @@ img {
       margin-left: 0;
       margin-right: $space-large;
     }
+  }
+}
+
+.column-spacer {
+  display: flex;
+  width: 0;
+  padding-right: ($space-tiny * 2);
+
+  @include min-screen($screen-small) {
+    padding-right: $space;
   }
 }
