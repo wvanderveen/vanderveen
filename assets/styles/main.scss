@@ -47,8 +47,8 @@ html {
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
   color: $gray-dark;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 22px;
 
   @include min-screen($screen-small) {
     font-size: 16px;
@@ -92,6 +92,7 @@ img {
 // A "column" has a margin on the right to organize content
 .column {
   display: inline-block;
+  margin-bottom: ($space-tiny * 2);
   margin-right: ($space-tiny * 2);
 
   @include min-screen($screen-small) {
@@ -103,8 +104,8 @@ img {
 .block {
   @include aspect-ratio(1);
   @extend .column;
-  max-height: $main-dimension;
-  max-width: $main-dimension;
+  max-height: auto;
+  max-width: auto;
   min-width: $main-dimension;
   overflow: hidden;
 
@@ -246,13 +247,16 @@ img {
 .projects,
 .project {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   flex-wrap: nowrap;
+  @include min-screen($screen-small) {
+    flex-flow: row; 
+  }
 }
 
 // Project Page (Homepage) Styles
 .project {
-  margin-right: $space;
+  margin-bottom: $space;
 
   &:last-of-type {
     margin-right: 0;
@@ -275,7 +279,7 @@ img {
   .project-title {
     font-size: 100%;
     margin: $space-small 0 0;
-    padding: 0 $space;
+    padding: 0;
 
     @include min-screen($screen-small) {
       margin-top: $space;
