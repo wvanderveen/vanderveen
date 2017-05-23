@@ -131,7 +131,8 @@ img {
 .content-column {
   @extend .column;
   flex-grow: 1;
-  max-width: $main-dimension;
+  max-height: auto;
+  max-width: auto;
   min-width: $main-dimension;
 
   @include min-screen ($screen-medium) {
@@ -256,7 +257,7 @@ img {
 
 // Project Page (Homepage) Styles
 .project {
-  margin-bottom: $space;
+  margin-bottom: 0;
 
   &:last-of-type {
     margin-right: 0;
@@ -270,7 +271,7 @@ img {
 .project-lead {
   display: flex;
   justify-content: center;
-  padding-top: $space;
+  padding-top: $space-small;
 
   @include min-screen($screen-small) {
     padding: $space;
@@ -288,8 +289,8 @@ img {
   }
 
   .project-content {
-    display: none;
-    margin: $space-small 0;
+    display: block;
+    margin: $space-small 0 0 0;
 
     @include min-screen($screen-small) {
       display: block;
@@ -305,7 +306,8 @@ img {
   }
 
   .project-download {
-    display: none;
+    display: block;
+    margin: $space-small 0 0 0;
 
     @include min-screen($screen-small) {
       display: block;
