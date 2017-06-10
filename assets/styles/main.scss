@@ -182,14 +182,14 @@ img {
   left: 0;
   padding-left: $wrapper-padding;
   padding-top: $space-small;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 
-  @include min-screen($screen-medium) {
-    position: fixed;
-  }
+  // @include min-screen($screen-medium) {
+  //   position: fixed;
+  // }
 }
 
 @include min-screen($screen-small) {
@@ -260,7 +260,7 @@ img {
 .nav-title {
   font-size: 106.25%;
   font-weight: normal;
-  margin: 0 0 0 15px;
+  margin: 0 0 0 15px ;
   display: inline-block;
   vertical-align: top;
   margin-top: 10px;
