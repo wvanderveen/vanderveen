@@ -348,13 +348,21 @@ img {
     display: flex;
     height: 42px;
     justify-content: center;
-    margin-left: ($space-tiny * 2);
-    margin-right: $space-medium;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $space-medium;
     width: 42px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 
     @include min-screen($screen-small) {
       margin-left: 0;
       margin-right: $space-large;
+      margin-bottom: 0;
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
     }
   }
 }

@@ -13,6 +13,11 @@ $(document).ready(function() {
   // Back Button Click
   $('.back').click(function(event) {
     event.preventDefault();
-    $('body, html').animate({scrollLeft: 0}, 600);
+    if ( $(window).width() > 499) {
+        $('body, html').animate({scrollLeft: 0}, 600);
+    } else {
+        $('body, html').animate({scrollTop: 0}, 600);
+    }
   });
+
 });
