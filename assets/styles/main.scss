@@ -81,7 +81,7 @@ img {
 // Aspect Ratio Mixin
 @mixin aspect-ratio($ratio-or-width, $height: null) {
   $padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width));
-  &:before { content:''; float: left; padding-bottom: $padding; }
+  &:before { content:''; float: left; padding-bottom: 0; }
   &:after  { content:''; display: table; clear: both; }
 }
 
@@ -302,7 +302,7 @@ img {
 
   .project-title {
     font-size: 100%;
-    margin: $space-small 0 0;
+    margin: 20px 0 0;
     padding: 0;
 
     @include min-screen($screen-small) {
