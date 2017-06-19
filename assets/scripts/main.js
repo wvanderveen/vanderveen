@@ -20,4 +20,18 @@ $(document).ready(function() {
     }
   });
 
+  var visited = sessionStorage.getItem('visited');
+  if (!visited) {
+    var $overlay = $('#overlay');
+    $overlay.css("display", "flex");
+    $overlay.mousemove(function () {
+      setTimeout(hideOverlay, 500);
+    });
+
+    function hideOverlay() {
+      $overlay.fadeOut();
+    }
+    sessionStorage.setItem('visited', true);
+  }
+
 });

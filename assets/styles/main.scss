@@ -134,33 +134,29 @@ img {
   max-height: auto;
   max-width: auto;
   min-width: $main-dimension;
-  // margin-bottom: 0;
-  // p:first-child {
-  //   margin-top: 6px;
-  // }
-
-  // @include min-screen ($screen-small) {
-  //   margin-bottom: ($space-tiny * 2);
-  //   p:first-child {
-  //     margin-top: 16px;
-  //   }
-  //   .column-content:first-child {
-  //     margin-top: 38px;
-  //   }
-  // }
+  & > :first-child, .column-content :first-child {
+    margin-top: 6px;
+  }
 
   @include min-screen ($screen-medium) {
     max-width: 330px;
     min-width: 330px;
   }
 
-  .column-title {
-    height: 22px;
-    font-weight: bold;
+  @include max-screen ($screen-small) {
+    margin-bottom: 0px;
   }
 }
 
+  .column-title {
+    height: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
 
+      @include max-screen ($screen-small) {
+        margin-top: 16px;
+      }
+  }
 
 /**
  * Layouts
@@ -278,6 +274,13 @@ img {
   }
 }
 
+//Hiding false column titles on small screens
+.small-hidden {
+  @include max-screen($screen-small) {
+    display: none;
+  }
+}
+
 // Project Page (Homepage) Styles
 .project {
   margin-bottom: 0;
@@ -341,6 +344,7 @@ img {
 .back-wrap {
   align-items: center;
   display: flex;
+  margin-right: 20px;
 
   .back {
     align-items: center;
@@ -375,4 +379,33 @@ img {
   @include min-screen($screen-small) {
     padding-right: $space;
   }
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+
+    img:first-child {
+      margin-right: $space-small;
+    }
+
+    img:last-child {
+      margin-left: $space-small;
+      transform: rotate(180deg);
+    }
 }
