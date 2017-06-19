@@ -20,18 +20,20 @@ $(document).ready(function() {
     }
   });
 
-  var visited = sessionStorage.getItem('visited');
-  if (!visited) {
-    var $overlay = $('#overlay');
-    $overlay.css("display", "flex");
-    $overlay.mousemove(function () {
-      setTimeout(hideOverlay, 500);
-    });
+  if ( $(window).width() > 499) {
+    var visited = sessionStorage.getItem('visited');
+    if (!visited) {
+      var $overlay = $('#overlay');
+      $overlay.css("display", "flex");
+      $overlay.on("mousemove click touchmove", function () {
+        setTimeout(hideOverlay, 1000);
+      });
 
-    function hideOverlay() {
-      $overlay.fadeOut();
+      function hideOverlay() {
+        $overlay.fadeOut();
+      }
+      sessionStorage.setItem('visited', true);
     }
-    sessionStorage.setItem('visited', true);
   }
 
 });
