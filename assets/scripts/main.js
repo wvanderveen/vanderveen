@@ -14,9 +14,9 @@ $(document).ready(function() {
   $('.back').click(function(event) {
     event.preventDefault();
     if ( $(window).width() > 499) {
-        $('body, html').animate({scrollLeft: 0}, 600);
+        $('body, html').animate({scrollLeft: 0}, 1000);
     } else {
-        $('body, html').animate({scrollTop: 0}, 600);
+        $('body, html').animate({scrollTop: 0}, 1000);
     }
   });
 
