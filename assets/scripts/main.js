@@ -13,14 +13,14 @@ $(document).ready(function() {
   // Back Button Click
   $('.back').click(function(event) {
     event.preventDefault();
-    if ( $(window).width() > 499) {
-        $('body, html').animate({scrollLeft: 0}, 1000);
+    if ( $(window).width() > 719) {
+        $('body, html').animate({scrollLeft: 0}, 700);
     } else {
-        $('body, html').animate({scrollTop: 0}, 1000);
+        $('body, html').animate({scrollTop: 0}, 700);
     }
   });
 
-  if ( $(window).width() > 499) {
+  if ( $(window).width() > 719) {
     var visited = sessionStorage.getItem('visited');
     if (!visited) {
       var $overlay = $('#overlay');

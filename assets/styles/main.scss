@@ -26,6 +26,7 @@ $space-medium: 40px;
 $space-large: 60px;
 
 // Screen Sizes
+$screen-mini: 1px;
 $screen-small: 500px;
 $screen-medium: 720px;
 
@@ -108,12 +109,6 @@ img {
   max-width: auto;
   min-width: $main-dimension;
   overflow: hidden;
-
-  @include min-screen ($screen-small) {
-    max-height: $main-dimension-small;
-    max-width: $main-dimension-small;
-    min-width: $main-dimension-small;
-  }
 
   @include min-screen ($screen-medium) {
     max-height: $main-dimension-medium;
@@ -224,7 +219,7 @@ img {
   padding-left: $space-large;
   position: absolute;
   top: 0;
-  width: 220px;
+  width: 255px;
   z-index: 50;
 
   .nav-item {
@@ -269,7 +264,7 @@ img {
   display: flex;
   flex-flow: column;
   flex-wrap: nowrap;
-  @include min-screen($screen-small) {
+  @include min-screen($screen-medium) {
     flex-flow: row; 
   }
 }
@@ -288,7 +283,7 @@ img {
   &:last-of-type {
     margin-right: 0;
 
-    @include min-screen($screen-small) {
+    @include min-screen($screen-medium) {
       margin-right: $space;
     }
   }
@@ -299,7 +294,7 @@ img {
   justify-content: center;
   padding-top: $space-small;
 
-  @include min-screen($screen-small) {
+  @include min-screen($screen-medium) {
     padding: $space;
   }
 
@@ -308,35 +303,93 @@ img {
     margin: 20px 0 0;
     padding: 0;
 
-    @include min-screen($screen-small) {
+    @include min-screen($screen-mini) {
       margin-top: $space;
+      padding: 0;
+    }
+  }
+
+  .project-title-adjusted {
+    font-size: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+
+    @include min-screen($screen-mini) {
+      margin-top: 25px;
+      padding: 0;
+    }
+  }
+
+   .project-title-adjusted-2 {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include min-screen($screen-small) {
+      margin-top: 0;
       padding: 0;
     }
   }
 
   .project-content {
     display: block;
-    margin: $space-small 0 0 0;
+    margin: 16px 0 22px 0;
 
     @include min-screen($screen-small) {
       display: block;
     }
 
+    @include min-screen($screen-mini) {
+      margin: 16px 0 8px 0;
+    }
+
     .content-extended {
       font-size: 0;
 
-      @include min-screen($screen-medium) {
+      @include min-screen($screen-small) {
         font-size: 100%;
       }
     }
   }
 
   .project-download {
-    display: block;
-    margin: $space-small 0 0 0;
+    background-color: white;
+    border: 1px solid #3B3A3A;
+    border-radius: 4px;
+    color: #3B3A3A;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    margin: 0px 4px 0px 0px;
+    cursor: pointer;
 
     @include min-screen($screen-small) {
-      display: block;
+      display: inline-block;
+    }
+
+    @include min-screen($screen-mini) {
+     margin: 14px 4px 0px 0px;
+    }
+  }
+
+  .project-download-2 {
+    background-color: white;
+    border: 1px solid #3B3A3A;
+    border-radius: 4px;
+    color: #3B3A3A;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    margin: 18px 4px 0px 0px;
+    cursor: pointer;
+
+    @include min-screen($screen-small) {
+      display: inline-block;
+      margin: 12px 4px 0px 0px;
     }
   }
 }
@@ -360,7 +413,7 @@ img {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 
-    @include min-screen($screen-small) {
+    @include min-screen($screen-medium) {
       margin-left: 0;
       margin-right: $space-large;
       margin-bottom: 0;
