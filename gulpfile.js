@@ -223,8 +223,8 @@ gulp.task('watch', function() {
     server: true,
     files: [
       'index.html',
-      'contact-info.html',
-      'credentials.html'
+      'type-design.html',
+      'narrative-signage.html'
     ]
   });
   gulp.watch([path.source + 'styles/**/*'], ['styles']);

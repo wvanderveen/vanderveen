@@ -26,12 +26,11 @@ $(document).ready(function() {
       var $overlay = $('#overlay');
       $overlay.css("display", "flex");
       $overlay.on("mousemove click touchmove", function () {
-        setTimeout(hideOverlay, 1000);
+        setTimeout(function() {
+          $overlay.fadeOut();
+        }, 1000);
       });
 
-      function hideOverlay() {
-        $overlay.fadeOut();
-      }
       sessionStorage.setItem('visited', true);
     }
   }
