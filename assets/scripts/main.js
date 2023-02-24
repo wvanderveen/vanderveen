@@ -1,7 +1,7 @@
 /**
  * Do stuff once the page has loaded!
  */
-$(document).ready(function() {
+jQuery(document).ready(function($){
   // Nav Button Toggle
   $('.nav-icon').click(function() {
     $(this).parent().toggleClass('open');
@@ -34,5 +34,4 @@ $(document).ready(function() {
       sessionStorage.setItem('visited', true);
     }
   }
-
 });
