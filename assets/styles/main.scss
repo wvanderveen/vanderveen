@@ -234,6 +234,7 @@ img {
   top: 0;
   width: 100%;
   z-index: 1000;
+  white-space: nowrap;
 
   // @include min-screen($screen-medium) {
   //   position: fixed;
@@ -259,6 +260,7 @@ img {
   display: inline-block;
   margin-right: $space-small;
   position: relative;
+  white-space: normal;
 }
 .nav-icon {
   background: url('../images/menu-icons.png') no-repeat left center;
@@ -276,7 +278,7 @@ img {
   padding-left: $space-large;
   position: absolute;
   top: 0;
-  width: 255px;
+  width: 280px;
   z-index: 50;
 
   .nav-item {
