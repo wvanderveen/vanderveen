@@ -1,6 +1,7 @@
 {
     "/scripts/main.js": "/scripts/main.js",
     "/styles/main.css": "/styles/main.css",
+    "/images/Print-and-logo.png": "/images/Print-and-logo.png",
     "/images/Zearn.png": "/images/Zearn.png",
     "/images/icon-back-white.svg": "/images/icon-back-white.svg",
     "/images/icon-back.svg": "/images/icon-back.svg",
@@ -56,6 +57,7 @@
     "/images/project-4/SAC_04.jpg": "/images/project-4/SAC_04.jpg",
     "/images/project-4/SAC_05.jpg": "/images/project-4/SAC_05.jpg",
     "/images/project-5/HSP_00.png": "/images/project-5/HSP_00.png",
+    "/images/project-5/HSP_00_2.png": "/images/project-5/HSP_00_2.png",
     "/images/project-5/HSP_01.png": "/images/project-5/HSP_01.png",
     "/images/project-5/HSP_02.png": "/images/project-5/HSP_02.png",
     "/images/project-5/HSP_03.png": "/images/project-5/HSP_03.png",
