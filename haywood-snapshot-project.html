@@ -150,22 +150,5 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js" defer></script>
   <script src="dist/scripts/main.js" defer></script>
-  <script>
-    const correctPassword = 'breakfast-for-dinner';
-    // Prompt the user for a password
-    const enteredPassword = window.prompt('Enter the password:');
-    // Check if the entered password is correct
-      if (enteredPassword === correctPassword) {
-        // Proceed with displaying the protected content
-        alert('Correct password! You can access the content.');
-      } else {
-        // Redirect to an error page or display an error message
-        alert('Incorrect password! Access denied.');
-        // Hide the content of the webpage
-        document.body.style.display = 'none';
-        // Redirect the user to an error page
-        window.location.href = '/';
-      }
-  </script>
 </body>
 </html>
