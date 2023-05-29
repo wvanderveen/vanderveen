@@ -108,7 +108,7 @@
   <div id="overlay">
     <p> 
       <img src= "dist/images/icon-back-white.svg" alt="">
-      Hup two! Left, right, left, right (horizontal scrolling)
+      <span id="label"></span>
       <img src= "dist/images/icon-back-white.svg" alt="">
     </p>
 
@@ -120,21 +120,32 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js" defer></script>
   <script src="dist/scripts/main.js" defer></script>
   <script>
-    const correctPassword = 'breakfast-for-dinner';
+    const correctPassword = "breakfast-for-dinner";
     // Prompt the user for a password
-    const enteredPassword = window.prompt('Please enter site password:');
+    const enteredPassword = window.prompt("Please enter site password:");
     // Check if the entered password is correct
       if (enteredPassword === correctPassword) {
         // Proceed with displaying the protected content
-        alert('Password accepted! Welcome. :)');
+        alert("Password accepted! Welcome. :)");
       } else {
         // Display error message
-        alert('Password denied! Access denied. :(');
+        alert("Password denied! Access denied. :(");
         // Hide the content of the webpage
-        document.body.style.display = 'none';
+        document.body.style.display = "none";
         // Redirect the user to home page
-        window.location.href = '/';
+        window.location.href = "/";
       }
+  </script>
+  <script>
+    // Array of labels
+    var labels = ["Bring it around town (horizontal scrolling)", "To the right now, y'all (horizontal scrolling)", "Who, scrolling? He went that-a-way (horizontal)", "Hup two! Left, right, left, right (horizontal scrolling)"];
+  
+    // Get a random index from the labels array
+    var randomIndex = Math.floor(Math.random() * labels.length);
+  
+    // Display the random label
+    var labelElement = document.getElementById("label");
+    labelElement.textContent = labels[randomIndex];
   </script>
 </body>
 </html>
