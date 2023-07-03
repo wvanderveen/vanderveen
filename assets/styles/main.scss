@@ -178,6 +178,22 @@ img {
   }
 }
 
+.dismiss-button {
+	background-color: $white;
+	border-radius: 4px;
+	color: $gray-dark;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 24px;
+	margin: 20px 0px 0px 0px;
+	cursor: pointer;
+	font-weight: 400;
+	letter-spacing: 0em;
+}
+
 // A "content-column" is like a column, but has a max-width of 330px for content it holds
 // They're also the same width
 .content-column {
@@ -503,15 +519,16 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.75); /* Black background with opacity */
+    background-color: rgba(0,0,0,0.9); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: white;
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.06em;
+    line-height: 2rem;
 
     img:first-child {
       margin-right: $space-small;

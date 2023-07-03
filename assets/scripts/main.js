@@ -20,17 +20,16 @@ jQuery(document).ready(function($){
     }
   });
 
-  if ( $(window).width() > 719) {
+  if ($(window).width() > 719) {
     var visited = sessionStorage.getItem('visited');
     if (!visited) {
       var $overlay = $('#overlay');
       $overlay.css("display", "flex");
-      $overlay.on("mousemove click touchmove", function () {
-        setTimeout(function() {
-          $overlay.fadeOut();
-        }, 1000);
+    
+      $('#dismiss-button').on("click", function () {
+        $overlay.fadeOut();
       });
-
+    
       sessionStorage.setItem('visited', true);
     }
   }
