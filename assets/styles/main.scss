@@ -520,7 +520,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.89); /* Black background with opacity */
+    background-color: rgba(52, 50, 50, 0.95); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     justify-content: center;
     align-items: center;
@@ -530,6 +530,8 @@ img {
     font-weight: 300;
     letter-spacing: 0.06em;
     line-height: 2rem;
+    backdrop-filter: blur(3px);
+	  -webkit-backdrop-filter: blur(3px);
 
     img:first-child {
       margin-right: $space-small;
