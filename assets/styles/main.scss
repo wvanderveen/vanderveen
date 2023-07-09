@@ -180,6 +180,7 @@ img {
 
 .dismiss-button {
 	background-color: $white;
+  border: 1px solid $gray-dark;
 	border-radius: 4px;
 	color: $gray-dark;
 	padding: 10px 16px;
@@ -191,7 +192,6 @@ img {
 	margin: 20px auto 0;
 	cursor: pointer;
 	font-weight: 400;
-	letter-spacing: 0em;
   width: fit-content;
 }
 
@@ -520,15 +520,14 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(52, 50, 50, 0.95); /* Black background with opacity */
+    background-color: rgba(255, 255, 255, 0.95); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: $gray-dark;
     font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 0.06em;
+    font-weight: 400;
     line-height: 2rem;
     backdrop-filter: blur(3px);
 	  -webkit-backdrop-filter: blur(3px);
