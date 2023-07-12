@@ -29,6 +29,12 @@ jQuery(document).ready(function($){
       $('#dismiss-button').on("click", function () {
         $overlay.fadeOut();
       });
+
+      $(document).on("keypress", function (event) {
+        if (event.keyCode === 13) { // Check if Enter key is pressed (key code 13)
+          $overlay.fadeOut();
+        }
+      });
     
       sessionStorage.setItem('visited', true);
     }

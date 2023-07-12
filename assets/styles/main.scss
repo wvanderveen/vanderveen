@@ -15,6 +15,9 @@ $white: #fff;
 $black: #000;
 $gray-light: #f7f7f7;
 $gray-dark: #3b3a3a;
+$background-color_1: #739C40;
+$background-color_2: #E7D4AC;
+$background-color_3: #D96036;
 
 // Space
 $space: 30px;
@@ -193,6 +196,28 @@ img {
 	cursor: pointer;
 	font-weight: 400;
   width: fit-content;
+}
+
+.color-badge-1 {
+	width: 60px;
+	height: 10px;
+	background-color: $background-color_1;
+	display: inline-block;
+	margin-top: 15px;
+}
+.color-badge-2 {
+	width: 60px;
+	height: 10px;
+	background-color: $background-color_2;
+	display: inline-block;
+	margin-top: 15px;
+}
+.color-badge-3 {
+	width: 60px;
+	height: 10px;
+	background-color: $background-color_3;
+	display: inline-block;
+	margin-top: 15px;
 }
 
 // A "content-column" is like a column, but has a max-width of 330px for content it holds
@@ -683,6 +708,11 @@ img {
 			margin-top: 9px;
 		}
 	}
+  .color-badge-1, .color-badge-2, .color-badge-3 {
+    width: 50px;
+    height: 8px;
+    margin-top: 12px;
+  }
 }
 @media screen and (max-width: 540px) {
 	.text-overlay, .text-overlay-centered, .text-overlay-centered-2 {
@@ -716,6 +746,11 @@ img {
 			margin-top: 8px;
 		}
 	}
+  .color-badge-1, .color-badge-2, .color-badge-3 {
+    width: 40px;
+    height: 6px;
+    margin-top: 8px;
+  }
 }
 @media screen and (max-width: 359px) {
 	.text-overlay, .text-overlay-centered, .text-overlay-centered-2 {
