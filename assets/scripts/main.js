@@ -35,17 +35,8 @@ jQuery(document).ready(function($){
           $overlay.fadeOut();
         }
       });
-    
+
       sessionStorage.setItem('visited', true);
     }
   }
-  
-  // Randomize the label that gets overlaid to suggest horizontal scrolling
-    // Array of labels
-    var labels = ["Bring it around town (horizontal scrolling)", "To the right now, y'all (horizontal scrolling)", "Who, scrolling? He went that-a-way (horizontal)", "Hup two! Left, right, left, right (horizontal scrolling)"];
-    // Get a random index from the labels array
-    var randomIndex = Math.floor(Math.random() * labels.length);
-    // Display the random label
-    var labelElement = document.getElementById("label");
-    labelElement.textContent = labels[randomIndex];
 });
